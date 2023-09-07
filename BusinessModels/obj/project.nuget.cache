@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "jZplCj6bdZu1Io6X6W12oJi4GFahFhx9rbjwDWrL0cqEg4cW8Ara4laFZQvFb1zhwABTJL8522z1/TzChpqa4w==",
+  "success": true,
+  "projectFilePath": "D:\\repos\\HD_Motor\\BusinessModels\\BusinessModels.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nikos\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\nikos\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
+    "C:\\Users\\nikos\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\nikos\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

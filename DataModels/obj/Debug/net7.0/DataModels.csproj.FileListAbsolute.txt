@@ -1,0 +1,12 @@
+D:\repos\HD_Motor\DataModels\bin\Debug\net7.0\DataModels.deps.json
+D:\repos\HD_Motor\DataModels\bin\Debug\net7.0\DataModels.dll
+D:\repos\HD_Motor\DataModels\bin\Debug\net7.0\DataModels.pdb
+D:\repos\HD_Motor\DataModels\obj\Debug\net7.0\DataModels.csproj.AssemblyReference.cache
+D:\repos\HD_Motor\DataModels\obj\Debug\net7.0\DataModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\repos\HD_Motor\DataModels\obj\Debug\net7.0\DataModels.AssemblyInfoInputs.cache
+D:\repos\HD_Motor\DataModels\obj\Debug\net7.0\DataModels.AssemblyInfo.cs
+D:\repos\HD_Motor\DataModels\obj\Debug\net7.0\DataModels.csproj.CoreCompileInputs.cache
+D:\repos\HD_Motor\DataModels\obj\Debug\net7.0\DataModels.dll
+D:\repos\HD_Motor\DataModels\obj\Debug\net7.0\refint\DataModels.dll
+D:\repos\HD_Motor\DataModels\obj\Debug\net7.0\DataModels.pdb
+D:\repos\HD_Motor\DataModels\obj\Debug\net7.0\ref\DataModels.dll

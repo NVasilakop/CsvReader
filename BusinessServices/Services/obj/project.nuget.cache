@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "v5SiEJLBA8ANQSWSTTiGkSuQg97PGwgsLTymkT7gcdOxeuyDmKw1iH5pNsJpCJs+I1ZgJl2U+VW1FCWCqhj16w==",
+  "success": true,
+  "projectFilePath": "D:\\repos\\HD_Motor\\BusinessServices\\Services\\Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nikos\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\nikos\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
+    "C:\\Users\\nikos\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\nikos\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

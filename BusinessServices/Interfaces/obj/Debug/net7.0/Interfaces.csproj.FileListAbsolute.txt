@@ -1,0 +1,17 @@
+D:\repos\HD_Motor\BusinessServices\Interfaces\bin\Debug\net7.0\Interfaces.deps.json
+D:\repos\HD_Motor\BusinessServices\Interfaces\bin\Debug\net7.0\Interfaces.dll
+D:\repos\HD_Motor\BusinessServices\Interfaces\bin\Debug\net7.0\Interfaces.pdb
+D:\repos\HD_Motor\BusinessServices\Interfaces\bin\Debug\net7.0\BusinessModels.dll
+D:\repos\HD_Motor\BusinessServices\Interfaces\bin\Debug\net7.0\DataModels.dll
+D:\repos\HD_Motor\BusinessServices\Interfaces\bin\Debug\net7.0\BusinessModels.pdb
+D:\repos\HD_Motor\BusinessServices\Interfaces\bin\Debug\net7.0\DataModels.pdb
+D:\repos\HD_Motor\BusinessServices\Interfaces\obj\Debug\net7.0\Interfaces.csproj.AssemblyReference.cache
+D:\repos\HD_Motor\BusinessServices\Interfaces\obj\Debug\net7.0\Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+D:\repos\HD_Motor\BusinessServices\Interfaces\obj\Debug\net7.0\Interfaces.AssemblyInfoInputs.cache
+D:\repos\HD_Motor\BusinessServices\Interfaces\obj\Debug\net7.0\Interfaces.AssemblyInfo.cs
+D:\repos\HD_Motor\BusinessServices\Interfaces\obj\Debug\net7.0\Interfaces.csproj.CoreCompileInputs.cache
+D:\repos\HD_Motor\BusinessServices\Interfaces\obj\Debug\net7.0\Interfaces.csproj.CopyComplete
+D:\repos\HD_Motor\BusinessServices\Interfaces\obj\Debug\net7.0\Interfaces.dll
+D:\repos\HD_Motor\BusinessServices\Interfaces\obj\Debug\net7.0\refint\Interfaces.dll
+D:\repos\HD_Motor\BusinessServices\Interfaces\obj\Debug\net7.0\Interfaces.pdb
+D:\repos\HD_Motor\BusinessServices\Interfaces\obj\Debug\net7.0\ref\Interfaces.dll

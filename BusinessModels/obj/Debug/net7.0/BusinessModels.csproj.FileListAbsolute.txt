@@ -1,0 +1,15 @@
+D:\repos\HD_Motor\BusinessModels\bin\Debug\net7.0\BusinessModels.deps.json
+D:\repos\HD_Motor\BusinessModels\bin\Debug\net7.0\BusinessModels.dll
+D:\repos\HD_Motor\BusinessModels\bin\Debug\net7.0\BusinessModels.pdb
+D:\repos\HD_Motor\BusinessModels\bin\Debug\net7.0\DataModels.dll
+D:\repos\HD_Motor\BusinessModels\bin\Debug\net7.0\DataModels.pdb
+D:\repos\HD_Motor\BusinessModels\obj\Debug\net7.0\BusinessModels.csproj.AssemblyReference.cache
+D:\repos\HD_Motor\BusinessModels\obj\Debug\net7.0\BusinessModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\repos\HD_Motor\BusinessModels\obj\Debug\net7.0\BusinessModels.AssemblyInfoInputs.cache
+D:\repos\HD_Motor\BusinessModels\obj\Debug\net7.0\BusinessModels.AssemblyInfo.cs
+D:\repos\HD_Motor\BusinessModels\obj\Debug\net7.0\BusinessModels.csproj.CoreCompileInputs.cache
+D:\repos\HD_Motor\BusinessModels\obj\Debug\net7.0\BusinessModels.csproj.CopyComplete
+D:\repos\HD_Motor\BusinessModels\obj\Debug\net7.0\BusinessModels.dll
+D:\repos\HD_Motor\BusinessModels\obj\Debug\net7.0\refint\BusinessModels.dll
+D:\repos\HD_Motor\BusinessModels\obj\Debug\net7.0\BusinessModels.pdb
+D:\repos\HD_Motor\BusinessModels\obj\Debug\net7.0\ref\BusinessModels.dll
