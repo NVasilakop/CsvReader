@@ -3,15 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HD_Motor_Service", "HD_Motor_Service.csproj", "{BB4B0858-FF5F-4CE8-A3ED-52BADED67D2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HD_Motor_Service", "HD_Motor_Service.csproj", "{BB4B0858-FF5F-4CE8-A3ED-52BADED67D2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessModels", "..\BusinessModels\BusinessModels.csproj", "{08F8DC0A-9558-4893-8489-313FE62C41A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessModels", "..\BusinessModels\BusinessModels.csproj", "{08F8DC0A-9558-4893-8489-313FE62C41A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModels", "..\DataModels\DataModels.csproj", "{75709F07-8046-4228-B21D-FCBFA930B6EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataModels", "..\DataModels\DataModels.csproj", "{75709F07-8046-4228-B21D-FCBFA930B6EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "..\BusinessServices\Interfaces\Interfaces.csproj", "{5813BD22-A607-4E9B-BEA9-BA2B595B47D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "..\BusinessServices\Interfaces\Interfaces.csproj", "{5813BD22-A607-4E9B-BEA9-BA2B595B47D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "..\BusinessServices\Services\Services.csproj", "{BAB72505-2180-4D07-9BBE-7F66CC3C501C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "..\BusinessServices\Services\Services.csproj", "{BAB72505-2180-4D07-9BBE-7F66CC3C501C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataWarehouseInterfaces", "..\DataWarehouseInterfaces\DataWarehouseInterfaces.csproj", "{D1F5DE1B-71A7-4E20-86F8-452C836A98D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataWarehouseServices", "..\DataWarehouseServices\DataWarehouseServices.csproj", "{B0B4A674-DF2A-4B62-82D1-2A0C03D65059}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayerUnitTests", "..\BusinessLayerUnitTests\BusinessLayerUnitTests.csproj", "{20D43904-03A4-4B73-913C-1D4E72D88BB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilizer", "..\Utilizer\Utilizer.csproj", "{C4930740-8D75-4FAC-861A-BDFB4C7E0746}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +47,22 @@ Global
 		{BAB72505-2180-4D07-9BBE-7F66CC3C501C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAB72505-2180-4D07-9BBE-7F66CC3C501C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAB72505-2180-4D07-9BBE-7F66CC3C501C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1F5DE1B-71A7-4E20-86F8-452C836A98D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1F5DE1B-71A7-4E20-86F8-452C836A98D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1F5DE1B-71A7-4E20-86F8-452C836A98D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1F5DE1B-71A7-4E20-86F8-452C836A98D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0B4A674-DF2A-4B62-82D1-2A0C03D65059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B4A674-DF2A-4B62-82D1-2A0C03D65059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B4A674-DF2A-4B62-82D1-2A0C03D65059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B4A674-DF2A-4B62-82D1-2A0C03D65059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20D43904-03A4-4B73-913C-1D4E72D88BB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20D43904-03A4-4B73-913C-1D4E72D88BB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20D43904-03A4-4B73-913C-1D4E72D88BB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20D43904-03A4-4B73-913C-1D4E72D88BB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4930740-8D75-4FAC-861A-BDFB4C7E0746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4930740-8D75-4FAC-861A-BDFB4C7E0746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4930740-8D75-4FAC-861A-BDFB4C7E0746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4930740-8D75-4FAC-861A-BDFB4C7E0746}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

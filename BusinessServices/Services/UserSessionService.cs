@@ -8,14 +8,12 @@ namespace Services
 {
     public class UserSessionService : IUserSessionService
     {
-        //private CsvReader _csvReader;
         public UserSessionService()
         {
-            var x = CsvPaths.SessionSubPath;
-            
+           
         }
 
-        public async Task<IEnumerable<Session>> GetSessions()
+        public async Task<IEnumerable<Session>> GetSessionsAsync()
         {
             var path = Path.GetDirectoryName(Directory.GetCurrentDirectory())+ CsvPaths.BasePath + CsvPaths.SessionSubPath;
             await using (var fsRead = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read))
@@ -25,13 +23,9 @@ namespace Services
                 {
                     try
                     {
-                        //csvReader.Context.Configuration.Delimiter = ",";
                         csvReader.Context.Configuration.HeaderValidated = null;
-                        //csvReader.Configuration.RegisterClassMap<SessionRecordMap>();
-                        //csvReader.Context.RegisterClassMap<SessionRecordMap>();
-                        //csvReader.Read();
-                        //csvReader.ReadHeader();
-                        var x = csvReader.GetRecords<Session>();
+                        csvReader.Context.RegisterClassMap<SessionRecordMap>();
+                        var x = csvReader.GetRecords<Session>().ToList();
 
                         return x;
                     }

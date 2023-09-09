@@ -9,7 +9,11 @@
       "HD_Motor_Service/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "BusinessModels": "1.0.0",
+          "DataModels": "1.0.0",
+          "DataWarehouseInterfaces": "1.0.0",
+          "DataWarehouseServices": "1.0.0",
           "Interfaces": "1.0.0",
           "Microsoft.Extensions.Hosting": "7.0.1",
           "Services": "1.0.0",
@@ -30,11 +34,31 @@
           }
         }
       },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "Microsoft.Extensions.Options": "7.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.1.0"
+          }
+        }
+      },
       "CsvHelper/30.0.1": {
         "runtime": {
           "lib/net6.0/CsvHelper.dll": {
             "assemblyVersion": "30.0.0.0",
             "fileVersion": "30.0.1.0"
+          }
+        }
+      },
+      "Dapper/2.0.151": {
+        "runtime": {
+          "lib/net5.0/Dapper.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.151.35995"
           }
         }
       },
@@ -396,6 +420,17 @@
           }
         }
       },
+      "Npgsql/7.0.4": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/Npgsql.dll": {
+            "assemblyVersion": "7.0.4.0",
+            "fileVersion": "7.0.4.0"
+          }
+        }
+      },
       "System.Configuration.ConfigurationManager/7.0.0": {
         "dependencies": {
           "System.Diagnostics.EventLog": "7.0.0",
@@ -519,6 +554,28 @@
           "DataModels.dll": {}
         }
       },
+      "DataWarehouseInterfaces/1.0.0": {
+        "dependencies": {
+          "DataModels": "1.0.0",
+          "Npgsql": "7.0.4"
+        },
+        "runtime": {
+          "DataWarehouseInterfaces.dll": {}
+        }
+      },
+      "DataWarehouseServices/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.0.151",
+          "DataWarehouseInterfaces": "1.0.0",
+          "Interfaces": "1.0.0",
+          "Npgsql": "7.0.4",
+          "Services": "1.0.0",
+          "Utilizer": "1.0.0"
+        },
+        "runtime": {
+          "DataWarehouseServices.dll": {}
+        }
+      },
       "Interfaces/1.0.0": {
         "dependencies": {
           "BusinessModels": "1.0.0"
@@ -533,6 +590,15 @@
         },
         "runtime": {
           "Services.dll": {}
+        }
+      },
+      "Utilizer/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.0.151",
+          "Npgsql": "7.0.4"
+        },
+        "runtime": {
+          "Utilizer.dll": {}
         }
       }
     }
@@ -550,12 +616,26 @@
       "path": "automapper/12.0.1",
       "hashPath": "automapper.12.0.1.nupkg.sha512"
     },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+g/K+Vpe3gGMKGzjslMOdqNlkikScDjWfVvmWTayrDHaG/n2pPmFBMa+jKX1r/h6BDGFdkyRjAuhFE3ykW+r1g==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/12.0.1",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512"
+    },
     "CsvHelper/30.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-rcZtgbWR+As4G3Vpgx0AMNmShGuQLFjkHAPIIflzrfkJCx8/AOd4m96ZRmiU1Wi39qS5UVjV0P8qdgqOo5Cwyg==",
       "path": "csvhelper/30.0.1",
       "hashPath": "csvhelper.30.0.1.nupkg.sha512"
+    },
+    "Dapper/2.0.151": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mMcZgx1lim0/i1Ozu+lgnBM4GwNIHpCuxV6BV2ovsEfZAXRAq4jb6RIhxGDcVjtmXMLPpdp85jHPdDjBMMwejw==",
+      "path": "dapper/2.0.151",
+      "hashPath": "dapper.2.0.151.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",
@@ -753,6 +833,13 @@
       "path": "newtonsoft.json/13.0.3",
       "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     },
+    "Npgsql/7.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7UVPYy2RP0ci04PED1tc9ZCaTw/DfSdSkLiGEFCAvwMwsgA/bAluj1liNzP1IpN0MFofnOF0cm1zJfmbEuCehg==",
+      "path": "npgsql/7.0.4",
+      "hashPath": "npgsql.7.0.4.nupkg.sha512"
+    },
     "System.Configuration.ConfigurationManager/7.0.0": {
       "type": "package",
       "serviceable": true,
@@ -826,12 +913,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "DataWarehouseInterfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataWarehouseServices/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Interfaces/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Utilizer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

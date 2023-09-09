@@ -12,17 +12,17 @@ namespace BusinessModels.Profiles
     {
         public SessionProfiler()
         {
-            CreateMap<Session,UserSession>()
-                //.ForMember(dest => dest.PathRaw, opt => opt.MapFrom(source => source.Paths.PathRaw))
-                //.ForMember(dest => dest.Path, opt => opt.MapFrom(source => source.Paths.Path))
-                //.ForMember(dest => dest.Product, opt => opt.MapFrom(source => source.PathInfo.Product))
-                .ForMember(dest => dest.UserId, opt => opt.MapFrom(source => source.UserId))
-                .ForMember(dest => dest.Id, opt => opt.MapFrom(source => source.Id))
-                .ForMember(dest => dest.Exit_Ts, opt => opt.MapFrom(source => source.Exit_Ts))
-                .ForMember(dest => dest.Record_Creation_Ts, opt => opt.MapFrom(source => source.Record_Creation_Ts))
-                .ForMember(dest => dest.Entry_Ts, opt => opt.MapFrom(source => source.Entry_Ts))
-                .ForMember(dest => dest.Last_Record_Update_Ts, opt => opt.MapFrom(source => source.Last_Record_Update_Ts));
-     
+            CreateMap<UserSession, Session>()
+              //.ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+              //.ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId))
+              //.ForMember(dest => dest.Record_Creation_Ts, opt => opt.MapFrom(src => src.Record_Creation_Ts))
+              //.ForMember(dest => dest.Last_Record_Update_Ts, opt => opt.MapFrom(src => src.Last_Record_Update_Ts))
+              //.ForMember(dest => dest.Paths, opt => opt.MapFrom(src => src.Paths))
+              //.ForMember(dest => dest.Entry_Ts, opt => opt.MapFrom(src => src.Entry_Ts))
+              //.ForMember(dest => dest.Exit_Ts, opt => opt.MapFrom(src => src.Exit_Ts))
+              //.ForMember(dest => dest.FirstColumn, opt => opt.Ignore()); 
+              ;
+            CreateMap<Session, UserSession>();
         }
     }
 }

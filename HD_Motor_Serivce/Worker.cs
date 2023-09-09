@@ -1,5 +1,11 @@
+using AutoMapper;
+using BusinessModels;
+using BusinessModels.Profiles;
+using DataWarehouseServices;
 using Interfaces;
 using Microsoft.Extensions.Options;
+using Services;
+using Utilizer;
 
 namespace HD_Motor_Service
 {
@@ -7,12 +13,37 @@ namespace HD_Motor_Service
     {
         private readonly ILogger<Worker> _logger;
         private readonly IUserSessionService _userSessionService;
-        //IOptions<CsvPaths> _customSettings;
+        private readonly DataWarehouseInterfaces.IUserSessionService _dataUserSessionService;
+        private readonly IQuoteEventService _quoteEventService;
+        private readonly IPolicyService _policyService;
+        private readonly IMapper _mapper;
+        private readonly DataWarehouseInterfaces.IPolicyService _dataWarehousePolicyService;
+        private readonly DataWarehouseInterfaces.IMasterService _dataWarehouseMasterService;
+        private readonly DataWarehouseInterfaces.IQuoteService _dataWarehouseQuoteService;
+        private readonly IDbConnectionFactory _dbConnectionFactory;
 
-        public Worker(ILogger<Worker> logger,IUserSessionService userSessionService)
+        public Worker(ILogger<Worker> logger, IUserSessionService userSessionService, DataWarehouseInterfaces.IUserSessionService dataUserSessionService,
+            IPolicyService policyService, IQuoteEventService quoteEventService, DataWarehouseInterfaces.IPolicyService dataWarehousePolicyService,
+            DataWarehouseInterfaces.IQuoteService dataWarehouseQuoteService, DataWarehouseInterfaces.IMasterService dataWarehouseMasterService,
+           IDbConnectionFactory dbConnectionFactory)
         {
             _logger = logger;
             _userSessionService = userSessionService;
+            _dataUserSessionService = dataUserSessionService;
+            _policyService = policyService;
+            _quoteEventService = quoteEventService;
+            _dataWarehouseMasterService = dataWarehouseMasterService;
+            _dataWarehousePolicyService = dataWarehousePolicyService;
+            _dataWarehouseQuoteService = dataWarehouseQuoteService;
+            _dbConnectionFactory = dbConnectionFactory;
+            var mapperConfig = new MapperConfiguration(
+         cfg =>
+         {
+             cfg.AddProfile(new SessionProfiler());
+             cfg.AddProfile(new QuoteProfiler());
+             cfg.AddProfile(new PolicyProfiler());
+         });
+            _mapper = new Mapper(mapperConfig);
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -20,8 +51,13 @@ namespace HD_Motor_Service
             while (!stoppingToken.IsCancellationRequested)
             {
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-                ReaderItems readerItems = new ReaderItems(_userSessionService,null);
-                await Task.Delay(1000, stoppingToken);
+                HdMotor_Reader motor_reader = new HdMotor_Reader(_userSessionService, _policyService, _quoteEventService);
+                var records = await motor_reader.ReadRecords();
+                var recordTransformator = new RecordTransformator(_mapper, records);
+                var dbManager = new DbManager(_dataUserSessionService, recordTransformator, _dataWarehousePolicyService,
+                    _dataWarehouseQuoteService, _dataWarehouseMasterService, _dbConnectionFactory);
+                await dbManager.InsertDBRows();
+                await Task.Delay(3600000, stoppingToken);
             }
         }
     }

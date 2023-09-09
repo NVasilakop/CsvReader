@@ -17,7 +17,7 @@ namespace BusinessModels
         [Name("product")]
         public string Product { get; set; }
         [Name("event_ts")]
-        public DateTime event_ts { get; set; }
+        public string Event_ts { get; set; }
       
     }
 }

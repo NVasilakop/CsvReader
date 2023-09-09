@@ -250,6 +250,149 @@
         }
       }
     },
+    "D:\\repos\\HD_Motor\\DataWarehouseInterfaces\\DataWarehouseInterfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\repos\\HD_Motor\\DataWarehouseInterfaces\\DataWarehouseInterfaces.csproj",
+        "projectName": "DataWarehouseInterfaces",
+        "projectPath": "D:\\repos\\HD_Motor\\DataWarehouseInterfaces\\DataWarehouseInterfaces.csproj",
+        "packagesPath": "C:\\Users\\nikos\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\HD_Motor\\DataWarehouseInterfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nikos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\repos\\HD_Motor\\DataModels\\DataModels.csproj": {
+                "projectPath": "D:\\repos\\HD_Motor\\DataModels\\DataModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Npgsql": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\repos\\HD_Motor\\DataWarehouseServices\\DataWarehouseServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\repos\\HD_Motor\\DataWarehouseServices\\DataWarehouseServices.csproj",
+        "projectName": "DataWarehouseServices",
+        "projectPath": "D:\\repos\\HD_Motor\\DataWarehouseServices\\DataWarehouseServices.csproj",
+        "packagesPath": "C:\\Users\\nikos\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\HD_Motor\\DataWarehouseServices\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nikos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\repos\\HD_Motor\\BusinessServices\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "D:\\repos\\HD_Motor\\BusinessServices\\Interfaces\\Interfaces.csproj"
+              },
+              "D:\\repos\\HD_Motor\\BusinessServices\\Services\\Services.csproj": {
+                "projectPath": "D:\\repos\\HD_Motor\\BusinessServices\\Services\\Services.csproj"
+              },
+              "D:\\repos\\HD_Motor\\DataWarehouseInterfaces\\DataWarehouseInterfaces.csproj": {
+                "projectPath": "D:\\repos\\HD_Motor\\DataWarehouseInterfaces\\DataWarehouseInterfaces.csproj"
+              },
+              "D:\\repos\\HD_Motor\\Utilizer\\Utilizer.csproj": {
+                "projectPath": "D:\\repos\\HD_Motor\\Utilizer\\Utilizer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.151, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\repos\\HD_Motor\\HD_Motor_Serivce\\HD_Motor_Service.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -282,6 +425,15 @@
               },
               "D:\\repos\\HD_Motor\\BusinessServices\\Services\\Services.csproj": {
                 "projectPath": "D:\\repos\\HD_Motor\\BusinessServices\\Services\\Services.csproj"
+              },
+              "D:\\repos\\HD_Motor\\DataModels\\DataModels.csproj": {
+                "projectPath": "D:\\repos\\HD_Motor\\DataModels\\DataModels.csproj"
+              },
+              "D:\\repos\\HD_Motor\\DataWarehouseInterfaces\\DataWarehouseInterfaces.csproj": {
+                "projectPath": "D:\\repos\\HD_Motor\\DataWarehouseInterfaces\\DataWarehouseInterfaces.csproj"
+              },
+              "D:\\repos\\HD_Motor\\DataWarehouseServices\\DataWarehouseServices.csproj": {
+                "projectPath": "D:\\repos\\HD_Motor\\DataWarehouseServices\\DataWarehouseServices.csproj"
               }
             }
           }
@@ -300,6 +452,10 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
               "version": "[7.0.1, )"
@@ -307,6 +463,71 @@
             "System.Configuration.ConfigurationManager": {
               "target": "Package",
               "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\repos\\HD_Motor\\Utilizer\\Utilizer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\repos\\HD_Motor\\Utilizer\\Utilizer.csproj",
+        "projectName": "Utilizer",
+        "projectPath": "D:\\repos\\HD_Motor\\Utilizer\\Utilizer.csproj",
+        "packagesPath": "C:\\Users\\nikos\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\HD_Motor\\Utilizer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nikos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.151, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[7.0.4, )"
             }
           },
           "imports": [

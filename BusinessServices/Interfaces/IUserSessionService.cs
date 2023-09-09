@@ -5,6 +5,6 @@ namespace Interfaces
 {
     public interface IUserSessionService
     {
-        Task<IEnumerable<Session>> GetSessions();
+        Task<IEnumerable<Session>> GetSessionsAsync();
     }
 }

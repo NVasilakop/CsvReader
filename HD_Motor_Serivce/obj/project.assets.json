@@ -18,6 +18,19 @@
           }
         }
       },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "[12.0.1]",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
       "CsvHelper/30.0.1": {
         "type": "package",
         "compile": {
@@ -27,6 +40,19 @@
         },
         "runtime": {
           "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Dapper/2.0.151": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Dapper.dll": {
             "related": ".xml"
           }
         }
@@ -609,6 +635,22 @@
           }
         }
       },
+      "Npgsql/7.0.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Npgsql.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Npgsql.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Configuration.ConfigurationManager/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -827,6 +869,38 @@
           "bin/placeholder/DataModels.dll": {}
         }
       },
+      "DataWarehouseInterfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DataModels": "1.0.0",
+          "Npgsql": "7.0.4"
+        },
+        "compile": {
+          "bin/placeholder/DataWarehouseInterfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataWarehouseInterfaces.dll": {}
+        }
+      },
+      "DataWarehouseServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Dapper": "2.0.151",
+          "DataWarehouseInterfaces": "1.0.0",
+          "Interfaces": "1.0.0",
+          "Npgsql": "7.0.4",
+          "Services": "1.0.0",
+          "Utilizer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DataWarehouseServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataWarehouseServices.dll": {}
+        }
+      },
       "Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -852,6 +926,20 @@
         "runtime": {
           "bin/placeholder/Services.dll": {}
         }
+      },
+      "Utilizer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Dapper": "2.0.151",
+          "Npgsql": "7.0.4"
+        },
+        "compile": {
+          "bin/placeholder/Utilizer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Utilizer.dll": {}
+        }
       }
     }
   },
@@ -869,6 +957,20 @@
         "icon.png",
         "lib/netstandard2.1/AutoMapper.dll",
         "lib/netstandard2.1/AutoMapper.xml"
+      ]
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
+      "sha512": "+g/K+Vpe3gGMKGzjslMOdqNlkikScDjWfVvmWTayrDHaG/n2pPmFBMa+jKX1r/h6BDGFdkyRjAuhFE3ykW+r1g==",
+      "type": "package",
+      "path": "automapper.extensions.microsoft.dependencyinjection/12.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+        "automapper.extensions.microsoft.dependencyinjection.nuspec",
+        "icon.png",
+        "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
     "CsvHelper/30.0.1": {
@@ -893,6 +995,24 @@
         "lib/netstandard2.0/CsvHelper.xml",
         "lib/netstandard2.1/CsvHelper.dll",
         "lib/netstandard2.1/CsvHelper.xml"
+      ]
+    },
+    "Dapper/2.0.151": {
+      "sha512": "mMcZgx1lim0/i1Ozu+lgnBM4GwNIHpCuxV6BV2ovsEfZAXRAq4jb6RIhxGDcVjtmXMLPpdp85jHPdDjBMMwejw==",
+      "type": "package",
+      "path": "dapper/2.0.151",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.0.151.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net5.0/Dapper.dll",
+        "lib/net5.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml"
       ]
     },
     "Microsoft.CSharp/4.7.0": {
@@ -1761,6 +1881,31 @@
         "packageIcon.png"
       ]
     },
+    "Npgsql/7.0.4": {
+      "sha512": "7UVPYy2RP0ci04PED1tc9ZCaTw/DfSdSkLiGEFCAvwMwsgA/bAluj1liNzP1IpN0MFofnOF0cm1zJfmbEuCehg==",
+      "type": "package",
+      "path": "npgsql/7.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net5.0/Npgsql.dll",
+        "lib/net5.0/Npgsql.xml",
+        "lib/net6.0/Npgsql.dll",
+        "lib/net6.0/Npgsql.xml",
+        "lib/net7.0/Npgsql.dll",
+        "lib/net7.0/Npgsql.xml",
+        "lib/netcoreapp3.1/Npgsql.dll",
+        "lib/netcoreapp3.1/Npgsql.xml",
+        "lib/netstandard2.0/Npgsql.dll",
+        "lib/netstandard2.0/Npgsql.xml",
+        "lib/netstandard2.1/Npgsql.dll",
+        "lib/netstandard2.1/Npgsql.xml",
+        "npgsql.7.0.4.nupkg.sha512",
+        "npgsql.nuspec",
+        "postgresql.png"
+      ]
+    },
     "System.Configuration.ConfigurationManager/7.0.0": {
       "sha512": "WvRUdlL1lB0dTRZSs5XcQOd5q9MYNk90GkbmRmiCvRHThWiojkpGqWdmEDJdXyHbxG/BhE5hmVbMfRLXW9FJVA==",
       "type": "package",
@@ -2084,6 +2229,16 @@
       "path": "../DataModels/DataModels.csproj",
       "msbuildProject": "../DataModels/DataModels.csproj"
     },
+    "DataWarehouseInterfaces/1.0.0": {
+      "type": "project",
+      "path": "../DataWarehouseInterfaces/DataWarehouseInterfaces.csproj",
+      "msbuildProject": "../DataWarehouseInterfaces/DataWarehouseInterfaces.csproj"
+    },
+    "DataWarehouseServices/1.0.0": {
+      "type": "project",
+      "path": "../DataWarehouseServices/DataWarehouseServices.csproj",
+      "msbuildProject": "../DataWarehouseServices/DataWarehouseServices.csproj"
+    },
     "Interfaces/1.0.0": {
       "type": "project",
       "path": "../BusinessServices/Interfaces/Interfaces.csproj",
@@ -2093,12 +2248,21 @@
       "type": "project",
       "path": "../BusinessServices/Services/Services.csproj",
       "msbuildProject": "../BusinessServices/Services/Services.csproj"
+    },
+    "Utilizer/1.0.0": {
+      "type": "project",
+      "path": "../Utilizer/Utilizer.csproj",
+      "msbuildProject": "../Utilizer/Utilizer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "AutoMapper >= 12.0.1",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "BusinessModels >= 1.0.0",
+      "DataModels >= 1.0.0",
+      "DataWarehouseInterfaces >= 1.0.0",
+      "DataWarehouseServices >= 1.0.0",
       "Interfaces >= 1.0.0",
       "Microsoft.Extensions.Hosting >= 7.0.1",
       "Services >= 1.0.0",
@@ -2140,6 +2304,15 @@
             },
             "D:\\repos\\HD_Motor\\BusinessServices\\Services\\Services.csproj": {
               "projectPath": "D:\\repos\\HD_Motor\\BusinessServices\\Services\\Services.csproj"
+            },
+            "D:\\repos\\HD_Motor\\DataModels\\DataModels.csproj": {
+              "projectPath": "D:\\repos\\HD_Motor\\DataModels\\DataModels.csproj"
+            },
+            "D:\\repos\\HD_Motor\\DataWarehouseInterfaces\\DataWarehouseInterfaces.csproj": {
+              "projectPath": "D:\\repos\\HD_Motor\\DataWarehouseInterfaces\\DataWarehouseInterfaces.csproj"
+            },
+            "D:\\repos\\HD_Motor\\DataWarehouseServices\\DataWarehouseServices.csproj": {
+              "projectPath": "D:\\repos\\HD_Motor\\DataWarehouseServices\\DataWarehouseServices.csproj"
             }
           }
         }
@@ -2155,6 +2328,10 @@
         "targetAlias": "net7.0",
         "dependencies": {
           "AutoMapper": {
+            "target": "Package",
+            "version": "[12.0.1, )"
+          },
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[12.0.1, )"
           },
