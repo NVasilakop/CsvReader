@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YMr6G2pGq9DaC6VlnKDcqFDGhQOqg9XJU47s0JvoTmuJJ79Shs1W90WcG/DACR8U1C2amenvSEgu0JJknnGSig==",
+  "dgSpecHash": "S5rGuZsEnpuETd6NPbpsnYAzvcGaFFSyoT5kyB6D4k8gm7UwoGS5XmF024U8bNlAsiYwRQyIcM+8OZbZUSFHvg==",
   "success": true,
   "projectFilePath": "D:\\repos\\HD_Motor\\HD_Motor_Serivce\\HD_Motor_Service.csproj",
   "expectedPackageFiles": [
@@ -45,7 +45,8 @@
     "C:\\Users\\nikos\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
     "C:\\Users\\nikos\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\nikos\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
-    "C:\\Users\\nikos\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
+    "C:\\Users\\nikos\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512",
+    "C:\\Users\\nikos\\.nuget\\packages\\z.dapper.plus\\6.0.2\\z.dapper.plus.6.0.2.nupkg.sha512"
   ],
   "logs": []
 }

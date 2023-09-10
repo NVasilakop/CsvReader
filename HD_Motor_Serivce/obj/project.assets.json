@@ -843,6 +843,23 @@
           }
         }
       },
+      "Z.Dapper.Plus/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Configuration.ConfigurationManager": "4.5.0"
+        },
+        "compile": {
+          "lib/net6.0/Z.Dapper.Plus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Z.Dapper.Plus.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "BusinessModels/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -892,7 +909,8 @@
           "Interfaces": "1.0.0",
           "Npgsql": "7.0.4",
           "Services": "1.0.0",
-          "Utilizer": "1.0.0"
+          "Utilizer": "1.0.0",
+          "Z.Dapper.Plus": "6.0.2"
         },
         "compile": {
           "bin/placeholder/DataWarehouseServices.dll": {}
@@ -2217,6 +2235,26 @@
         "system.windows.extensions.7.0.0.nupkg.sha512",
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "Z.Dapper.Plus/6.0.2": {
+      "sha512": "hwbwIZzXZPIbm4xk+9E5bXZ6B6isW/gFxOubmp18q0X4wJ28wbssogx4oodgY1iY7lE9X15X3DVzZXa6DlQvdQ==",
+      "type": "package",
+      "path": "z.dapper.plus/6.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Z.Dapper.Plus.dll",
+        "lib/net40/Z.Dapper.Plus.xml",
+        "lib/net45/Z.Dapper.Plus.dll",
+        "lib/net45/Z.Dapper.Plus.xml",
+        "lib/net6.0/Z.Dapper.Plus.dll",
+        "lib/net6.0/Z.Dapper.Plus.xml",
+        "lib/netstandard2.0/Z.Dapper.Plus.dll",
+        "lib/netstandard2.0/Z.Dapper.Plus.xml",
+        "readme.md",
+        "z.dapper.plus.6.0.2.nupkg.sha512",
+        "z.dapper.plus.nuspec"
       ]
     },
     "BusinessModels/1.0.0": {

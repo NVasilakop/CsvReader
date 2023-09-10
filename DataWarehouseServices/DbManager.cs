@@ -46,7 +46,9 @@ namespace DataWarehouseServices
                         conn.Open();
                         await _userSessionService.WriteUserSessionsToDB(_recordTransformator.GetUserSessions(), conn);
                         await _quoteService.WriteQuotesToDB(_recordTransformator.GetQuotes(), conn);
+                        await _quoteService.WriteQuotesSnapshotsToDB(_recordTransformator.GetQuotes(), conn);
                         await _policyService.WritePoliciesToDB(_recordTransformator.GetPolicies(), conn);
+                        await _masterService.WritMasterToDB(conn);
                         scope.Complete();
                     }
                 }

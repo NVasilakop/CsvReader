@@ -538,6 +538,18 @@
           }
         }
       },
+      "Z.Dapper.Plus/6.0.2": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "System.Configuration.ConfigurationManager": "7.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Z.Dapper.Plus.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2.0"
+          }
+        }
+      },
       "BusinessModels/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
@@ -570,7 +582,8 @@
           "Interfaces": "1.0.0",
           "Npgsql": "7.0.4",
           "Services": "1.0.0",
-          "Utilizer": "1.0.0"
+          "Utilizer": "1.0.0",
+          "Z.Dapper.Plus": "6.0.2"
         },
         "runtime": {
           "DataWarehouseServices.dll": {}
@@ -902,6 +915,13 @@
       "sha512": "sha512-bR4qdCmssMMbo9Fatci49An5B1UaVJZHKNq70PRgzoLYIlitb8Tj7ns/Xt5Pz1CkERiTjcVBDU2y1AVrPBYkaw==",
       "path": "system.windows.extensions/7.0.0",
       "hashPath": "system.windows.extensions.7.0.0.nupkg.sha512"
+    },
+    "Z.Dapper.Plus/6.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hwbwIZzXZPIbm4xk+9E5bXZ6B6isW/gFxOubmp18q0X4wJ28wbssogx4oodgY1iY7lE9X15X3DVzZXa6DlQvdQ==",
+      "path": "z.dapper.plus/6.0.2",
+      "hashPath": "z.dapper.plus.6.0.2.nupkg.sha512"
     },
     "BusinessModels/1.0.0": {
       "type": "project",
