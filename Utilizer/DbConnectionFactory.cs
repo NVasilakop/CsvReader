@@ -65,29 +65,8 @@ namespace Utilizer
                 last_record_update_ts TIMESTAMP
             );
 
-            CREATE TABLE IF NOT EXISTS Quote (
-                id VARCHAR(255) PRIMARY KEY,
-                event_type VARCHAR(255),
-                quote_reference VARCHAR(255),
-                created_timestamp TIMESTAMP,
-                updated_timestamp TIMESTAMP,
-                distribution_channel VARCHAR(255),
-                intermediary_name VARCHAR(255),
-                date_of_birth VARCHAR(255),
-                vehicle_cc VARCHAR(255),
-                vehicle_model VARCHAR(255),
-                vehicle_make VARCHAR(255),
-                vehicle_registration_date VARCHAR(255),
-                numberplate VARCHAR(255),
-                vehicle_type VARCHAR(255),
-                end_date VARCHAR(255),
-                product VARCHAR(255),
-                start_date VARCHAR(255),
-                sum_assured VARCHAR(255),
-                total_premium VARCHAR(255)
-            );
 
-            CREATE TABLE IF NOT EXISTS Quote_Snapshot (
+            CREATE TABLE IF NOT EXISTS Quote (
                 id VARCHAR(255) PRIMARY KEY,
                 event_type VARCHAR(255),
                 quote_reference VARCHAR(255),
@@ -130,7 +109,7 @@ namespace Utilizer
                 vehicle_type VARCHAR(255)
             );
 
-             CREATE TABLE IF NOT EXISTS Master_Data (
+             CREATE TABLE IF NOT EXISTS Master (
                 usersessionid VARCHAR(255),
                 quoteproduct VARCHAR(255),
                 event_type VARCHAR(255),
@@ -181,7 +160,7 @@ namespace Utilizer
             CREATE OR REPLACE FUNCTION InsertMasterDataIntoMasterTable()
             RETURNS VOID AS $$
             BEGIN
-                INSERT INTO master_data (usersessionid, quoteproduct, quote_reference,event_type,path,created_timestamp,updated_timestamp,distribution_channel,intermediary_name,date_of_birth,
+                INSERT INTO master (usersessionid, quoteproduct, quote_reference,event_type,path,created_timestamp,updated_timestamp,distribution_channel,intermediary_name,date_of_birth,
                                          vehicle_make,vehicle_cc,vehicle_model,vehicle_registration_date,numberplate,vehicle_type,end_date,product,start_date,
                                         sum_assured,total_premium,policy_id)
                 SELECT
@@ -210,7 +189,7 @@ namespace Utilizer
                 FROM
                     usersessionquote us
                 INNER JOIN
-                    quote_snapshot qs ON us.q_ref = qs.quote_reference
+                    quote qs ON us.q_ref = qs.quote_reference
                 LEFT JOIN
                     policy p ON qs.quote_reference = p.quote_reference
                 WHERE

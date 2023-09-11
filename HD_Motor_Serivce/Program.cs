@@ -23,6 +23,10 @@ internal class Program
         IHost host = Host.CreateDefaultBuilder(args)
             .ConfigureServices(services =>
             {
+                services.AddLogging(logBuilder =>
+                {
+                    logBuilder.AddConsole();
+                });
                 var myCustomSettings = new DBConnectionDetails();
                 config.GetSection("DBConnectionDetails").Bind(myCustomSettings);
                 services.AddSingleton(myCustomSettings);

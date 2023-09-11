@@ -13,14 +13,11 @@ namespace HD_Motor_Service
     {
         private readonly ILogger<Worker> _logger;
         private readonly IUserSessionService _userSessionService;
-        private readonly DataWarehouseInterfaces.IUserSessionService _dataUserSessionService;
         private readonly IQuoteEventService _quoteEventService;
         private readonly IPolicyService _policyService;
         private readonly IMapper _mapper;
-        private readonly DataWarehouseInterfaces.IPolicyService _dataWarehousePolicyService;
-        private readonly DataWarehouseInterfaces.IMasterService _dataWarehouseMasterService;
-        private readonly DataWarehouseInterfaces.IQuoteService _dataWarehouseQuoteService;
         private readonly IDbConnectionFactory _dbConnectionFactory;
+        private readonly WarehouseServiceWrapper _warehouseServiceWrapper;
 
         public Worker(ILogger<Worker> logger, IUserSessionService userSessionService, DataWarehouseInterfaces.IUserSessionService dataUserSessionService,
             IPolicyService policyService, IQuoteEventService quoteEventService, DataWarehouseInterfaces.IPolicyService dataWarehousePolicyService,
@@ -29,12 +26,9 @@ namespace HD_Motor_Service
         {
             _logger = logger;
             _userSessionService = userSessionService;
-            _dataUserSessionService = dataUserSessionService;
             _policyService = policyService;
             _quoteEventService = quoteEventService;
-            _dataWarehouseMasterService = dataWarehouseMasterService;
-            _dataWarehousePolicyService = dataWarehousePolicyService;
-            _dataWarehouseQuoteService = dataWarehouseQuoteService;
+            _warehouseServiceWrapper = new WarehouseServiceWrapper(dataUserSessionService, dataWarehousePolicyService, dataWarehouseMasterService, dataWarehouseQuoteService);
             _dbConnectionFactory = dbConnectionFactory;
             var mapperConfig = new MapperConfiguration(
          cfg =>
@@ -54,10 +48,9 @@ namespace HD_Motor_Service
                 HdMotor_Reader motor_reader = new HdMotor_Reader(_userSessionService, _policyService, _quoteEventService);
                 var records = await motor_reader.ReadRecords();
                 var recordTransformator = new RecordTransformator(_mapper, records);
-                var dbManager = new DbManager(_dataUserSessionService, recordTransformator, _dataWarehousePolicyService,
-                    _dataWarehouseQuoteService, _dataWarehouseMasterService, _dbConnectionFactory);
+                var dbManager = new DbManager(_warehouseServiceWrapper, recordTransformator, _dbConnectionFactory);
                 await dbManager.InsertDBRows();
-                await dbManager.InsertQuotesAndStoredProcedureItems();
+                await dbManager.InsertStoredProcedureItems();
                 await Task.Delay(3600000, stoppingToken);
             }
         }

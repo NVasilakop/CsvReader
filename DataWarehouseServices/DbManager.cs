@@ -1,5 +1,7 @@
 ﻿using BusinessModels;
 using DataWarehouseInterfaces;
+using Microsoft.Extensions.Logging;
+using Services;
 using System.Transactions;
 using Utilizer;
 using static System.Formats.Asn1.AsnWriter;
@@ -15,16 +17,15 @@ namespace DataWarehouseServices
         private IDbConnectionFactory _dbConnectionFactory;
         private RecordTransformator _recordTransformator;
 
-        public DbManager(DataWarehouseInterfaces.IUserSessionService userSessionService,
-           RecordTransformator recordTransformator,
-          DataWarehouseInterfaces.IPolicyService policyService, IQuoteService quoteService, IMasterService masterService, IDbConnectionFactory dbConnectionFactory)
+        public DbManager(WarehouseServiceWrapper wrapper,
+           RecordTransformator recordTransformator,IDbConnectionFactory dbConnectionFactory)
         {
-            _userSessionService = userSessionService;
-            _policyService = policyService;
-            _quoteService = quoteService;
-            _masterService = masterService;
-            _dbConnectionFactory = dbConnectionFactory;
-            _recordTransformator = recordTransformator;
+            _userSessionService = wrapper.GetUserSessionService();
+            _policyService = wrapper.GetPolicyService();
+            _quoteService = wrapper.GetQuoteService();
+            _masterService = wrapper.GetMasterService();
+            _dbConnectionFactory = dbConnectionFactory ?? throw new ArgumentNullException(nameof(dbConnectionFactory));
+            _recordTransformator = recordTransformator ?? throw new ArgumentNullException(nameof(recordTransformator));
         }
 
         public async Task InsertDBRows()
@@ -48,7 +49,7 @@ namespace DataWarehouseServices
                 }
             }
         }
-        public async Task InsertQuotesAndStoredProcedureItems()
+        public async Task InsertStoredProcedureItems()
         {
             using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
@@ -57,7 +58,6 @@ namespace DataWarehouseServices
                     using (var conn = _dbConnectionFactory.CreateConnection())
                     {
                         conn.Open();
-                        await _quoteService.WriteQuotesToDB(_recordTransformator.GetQuotes(), conn);
                         await _masterService.WriteMasterToDB(conn);
                         scope.Complete();
                     }
