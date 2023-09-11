@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "p0lOm95sVU555EsptFTkH88KlXbA9xKwCuHtjIT7i/xlK/Xfyf+dkUZUUUHzxOkjhS6rotxdFbXlYTFJpugpFw==",
+  "dgSpecHash": "es2gnJXkfJoOoc8QLYNsPgxoctwRnyP1L6tYT7d4WH8R0G0jOJ59TbD5J/TOr49Ocqux8lVOsuNGnmsmHuQlSA==",
   "success": true,
   "projectFilePath": "D:\\repos\\HD_Motor\\DataModels\\DataModels.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\nikos\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

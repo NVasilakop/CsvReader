@@ -1,15 +1,9 @@
-﻿using DataModels;
-using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Npgsql;
 
 namespace DataWarehouseInterfaces
 {
     public interface IMasterService
     {
-        Task WritMasterToDB(NpgsqlConnection conn);
+        Task WriteMasterToDB(NpgsqlConnection conn);
     }
 }

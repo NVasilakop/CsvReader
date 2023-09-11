@@ -57,6 +57,7 @@ namespace HD_Motor_Service
                 var dbManager = new DbManager(_dataUserSessionService, recordTransformator, _dataWarehousePolicyService,
                     _dataWarehouseQuoteService, _dataWarehouseMasterService, _dbConnectionFactory);
                 await dbManager.InsertDBRows();
+                await dbManager.InsertQuotesAndStoredProcedureItems();
                 await Task.Delay(3600000, stoppingToken);
             }
         }

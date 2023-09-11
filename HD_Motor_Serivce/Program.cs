@@ -26,12 +26,12 @@ internal class Program
                 var myCustomSettings = new DBConnectionDetails();
                 config.GetSection("DBConnectionDetails").Bind(myCustomSettings);
                 services.AddSingleton(myCustomSettings);
-
-                var x = config.GetValue<string>("CsvPaths:SessionSubPath");
                 CsvPaths.BasePath = config.GetValue<string>("CsvPaths:BasePath");
                 CsvPaths.PolicySubPath = config.GetValue<string>("CsvPaths:PolicySubPath");
                 CsvPaths.QuoteSubPath = config.GetValue<string>("CsvPaths:QuoteSubPath");
                 CsvPaths.SessionSubPath = config.GetValue<string>("CsvPaths:SessionSubPath");
+                
+                //Todo: Investigate why this dont work 
                 services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
                 RegisterDBInfra(services);
                 RegisterBusinessServices(services);
@@ -50,7 +50,6 @@ internal class Program
         services.AddSingleton<Interfaces.IUserSessionService, Services.UserSessionService>();
         services.AddSingleton<IQuoteEventService,QuoteEventService>();
         services.AddSingleton<Interfaces.IPolicyService, Services.PolicyService>();
-        services.AddSingleton<IReaderService,ReaderService>();
     }
 
     private static void RegisterDataServices(IServiceCollection services)
